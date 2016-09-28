@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en"><head>
+<meta charset="UTF-8">
+	<title>Получить анекдот</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Простое приложение для получения анекдотов <small>(JAVA MVC)</small></h1>
+		</div>
+
+		<form class="form-inline" method="POST" action="joke.do">
+			<div class="form-group">
+				<label for="subject">Выберите тему анекдота</label>
+
+				<select name="subject" class="form-control" id="subject">
+					<option value="1">Анекдот</option>
+					<option value="2">Рассказы</option>
+					<option value="3">Стишки</option>
+					<option value="4">Афоризмы</option>
+					<option value="5">Цитаты</option>
+					<option value="6">Тосты</option>
+					<option value="8">Статусы</option>
+					<option value="11">Анекдот (+18)</option>
+					<option value="12">Рассказы (+18)</option>
+					<option value="13">Стишки (+18)</option>
+					<option value="14">Афоризмы (+18)</option>
+					<option value="15">Цитаты (+18)</option>
+					<option value="16">Тосты (+18)</option>
+					<option value="18">Статусы (+18)</option>
+				</select>
+			</div>
+
+		  	<button type="submit" class="btn btn-default">Получить анекдот</button>
+		</form>
+	</div>
+</body>
+</html>
