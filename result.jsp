@@ -11,6 +11,10 @@
 </head>
 <body>
 <div class="container">
+    <div>
+        <a href="https://github.com/kvark85/JAVA_Joke_exprt-MVC-">github.com/kvark85/JAVA_Joke_exprt-MVC-</a>
+    </div>
+
     <div class="page-header">
         <h1>Простое приложение для получения анекдотов <small>(JAVA MVC)</small></h1>
     </div>
@@ -22,7 +26,7 @@
         %>
     </div>
     <div>
-        <a href="/Beer-v1">Назад</a>
+        <a href="/Joke-v1">Назад</a>
     </div>
 </div>
 </body>
