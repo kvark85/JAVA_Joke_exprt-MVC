@@ -3,19 +3,38 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     version="2.4">
 	<servlet>
-		<servlet-name>
-			Ch3 Beer
-		</servlet-name>
-		<servlet-class>
-			com.example.web.JokeSelect
-		</servlet-class>
+		<servlet-name>Ch3 Beer</servlet-name>
+		<servlet-class>com.example.web.JokeSelect</servlet-class>
+
+		<init-param>
+			<param-name>just_test</param-name>
+			<param-value>aaabbbccc</param-value>
+		</init-param>
 	</servlet>
+
 	<servlet-mapping>
-		<servlet-name>
-			Ch3 Beer
-		</servlet-name>
-		<url-pattern>
-			/joke.do
-		</url-pattern>
+		<servlet-name>Ch3 Beer</servlet-name>
+		<url-pattern>/joke.do</url-pattern>
   	</servlet-mapping>
+
+	<context-param>
+		<param-name>main_domain</param-name>
+		<param-value>JAVA_Joke_exprt-MVC</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>admin_email</param-name>
+		<param-value>kvark198@gmail.com</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>name_s</param-name>
+		<param-value>Max</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>
+			MyServletContextListener
+		</listener-class>
+	</listener>
 </web-app>
