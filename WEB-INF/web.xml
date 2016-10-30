@@ -22,19 +22,23 @@
 		<param-value>JAVA_Joke_exprt-MVC</param-value>
 	</context-param>
 
+	<!-- Developer Information  START -->
 	<context-param>
-		<param-name>admin_email</param-name>
+		<param-name>developer_name</param-name>
+		<param-value>Andrey</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>developer_email</param-name>
 		<param-value>kvark198@gmail.com</param-value>
 	</context-param>
+	<!-- Developer Information  END -->
 
-	<context-param>
-		<param-name>name_s</param-name>
-		<param-value>Max</param-value>
-	</context-param>
-
+	<!-- Описываем слушателей Information  START -->
 	<listener>
 		<listener-class>
-			MyServletContextListener
+			com.example.FirstServletContextListener
 		</listener-class>
 	</listener>
+	<!-- Описываем слушателей Information  END -->
 </web-app>
