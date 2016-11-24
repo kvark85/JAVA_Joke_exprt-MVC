@@ -3,7 +3,8 @@
 
 
 <!DOCTYPE HTML>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <title>Получить анекдот</title>
     <link rel="stylesheet" href="css/style.css">

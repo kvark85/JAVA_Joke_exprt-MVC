@@ -2,6 +2,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     version="2.4">
+	<!-- "Сервлет <-> JSP" START -->
 	<servlet>
 		<servlet-name>Ch3 Beer</servlet-name>
 		<servlet-class>com.example.web.JokeSelect</servlet-class>
@@ -16,6 +17,17 @@
 		<servlet-name>Ch3 Beer</servlet-name>
 		<url-pattern>/joke.do</url-pattern>
   	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>j</servlet-name>
+		<servlet-class>com.example.web.servlet_1</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>j</servlet-name>
+		<url-pattern>url_1</url-pattern>
+	</servlet-mapping>
+	<!-- "Сервлет <-> JSP" END -->
 
 	<context-param>
 		<param-name>main_domain</param-name>
@@ -35,10 +47,8 @@
 	<!-- Developer Information  END -->
 
 	<!-- Описываем слушателей Information  START -->
-	<listener>
-		<listener-class>
-			com.example.FirstServletContextListener
-		</listener-class>
-	</listener>
+	<!--<listener>-->
+		<!--<listener-class>com.example.FirstServletContextListener</listener-class>-->
+	<!--</listener>-->
 	<!-- Описываем слушателей Information  END -->
 </web-app>

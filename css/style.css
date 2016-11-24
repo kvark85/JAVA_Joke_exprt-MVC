@@ -1,3 +1,8 @@
 .margin-bottom {
     margin-bottom: 15px;
 }
+.demoBlock {
+    padding: 20px;
+    border: 2px solid deepskyblue;
+    border-radius: 4px;
+}
