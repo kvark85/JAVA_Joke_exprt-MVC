@@ -25,7 +25,7 @@
 
 	<!--<servlet-mapping>-->
 		<!--<servlet-name>j</servlet-name>-->
-		<!--<url-pattern>url_1</url-pattern>-->
+		<!--<url-pattern>/url_1</url-pattern>-->
 	<!--</servlet-mapping>-->
 	<!-- "Сервлет <-> JSP" END -->
 

@@ -1,14 +1,21 @@
 From WEB-INF
 
-1) Recompile model
-javac -d classes src\com\example\model\BeerExpert.java
+1) Recompile model:
+javac -d classes src\com\example\model\JokeExpert.java
 
-2) Recompile test for model
+2) Recompile test for model:
 javac -classpath classes -d classes src\com\example\test\testModel.java
 
-3) Run test
-java -classpath classes com.example.test.testModel aaa
+4) Recompile developer information class:
+javac -d classes src\com\example\aboutDeveloper\DeveloperInformation.java
 
-4) Recompile Servlet
+4) Recompile servlet context listener:
+javac -d classes src\com\example\FirstServletContextListener.java
+
+5) Recompile Servlet:
 javac -classpath C:\apache-tomcat-9.0.0.M9\lib\servlet-api.jar;classes -d classes src\com\example\web\BeerSelect.java
 
+----------
+
+Run test:
+java -classpath classes com.example.test.testModel 1
