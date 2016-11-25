@@ -14,12 +14,12 @@ public class JokeSelect extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
 
-        String just_test = getServletConfig().getInitParameter("just_test");
+        String markupDesigner = getServletConfig().getInitParameter("markup-designer");
         String main_domain = getServletContext().getInitParameter("main_domain");
         String admin_email = getServletContext().getInitParameter("admin_email");
 
         request.setAttribute("joke", result);
-        request.setAttribute("just_test", just_test);
+        request.setAttribute("markup_designer", markupDesigner);
         request.setAttribute("main_domain", main_domain);
         request.setAttribute("admin_email", admin_email);
 

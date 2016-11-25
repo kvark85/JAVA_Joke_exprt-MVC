@@ -3,7 +3,8 @@
 
 
 <!DOCTYPE HTML>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <title>Получить анекдот</title>
     <link rel="stylesheet" href="css/style.css">
@@ -13,7 +14,7 @@
 <body>
 <div class="container">
     <div>
-        <a href="https://github.com/kvark85/JAVA_Joke_exprt-MVC-">github.com/kvark85/JAVA_Joke_exprt-MVC-</a>
+        <a href="https://github.com/kvark85/JAVA_Joke_exprt-MVC">github.com/kvark85/JAVA_Joke_exprt-MVC</a>
     </div>
 
     <div class="page-header">
@@ -36,8 +37,8 @@
             Данная страница построена с помощью jsp
         </p>
         <p>
-            Значение <b>"just_test"</b> из <b>"servlet init parameters"</b>:
-            <b><% out.print((String)request.getAttribute("just_test")); %></b>
+            Дизайнер этой страницы:
+            <b><% out.print((String)request.getAttribute("markup_designer")); %></b>
             <br />
             (путь: servlet init parameters (in DD) -> Servlet -> JSP)
         </p>
@@ -47,14 +48,6 @@
             <br />
             (путь: context init parameters (in DD) -> Servlet -> JSP)
         </p>
-
-        <p>
-            Значение <b>"admin_email"</b> из <b>"context init parameters"</b>:
-            <b><% out.print((String)request.getAttribute("admin_email")); %></b>
-            <br />
-            (путь: context init parameters (in DD) -> Servlet -> JSP)
-        </p>
-
     </div>
 </div>
 </body>
