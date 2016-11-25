@@ -37,8 +37,8 @@
             Данная страница построена с помощью jsp
         </p>
         <p>
-            Значение <b>"just_test"</b> из <b>"servlet init parameters"</b>:
-            <b><% out.print((String)request.getAttribute("just_test")); %></b>
+            Дизайнер этой страницы:
+            <b><% out.print((String)request.getAttribute("markup_designer")); %></b>
             <br />
             (путь: servlet init parameters (in DD) -> Servlet -> JSP)
         </p>
@@ -48,14 +48,6 @@
             <br />
             (путь: context init parameters (in DD) -> Servlet -> JSP)
         </p>
-
-        <p>
-            Значение <b>"admin_email"</b> из <b>"context init parameters"</b>:
-            <b><% out.print((String)request.getAttribute("admin_email")); %></b>
-            <br />
-            (путь: context init parameters (in DD) -> Servlet -> JSP)
-        </p>
-
     </div>
 </div>
 </body>

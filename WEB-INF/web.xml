@@ -8,8 +8,8 @@
 		<servlet-class>com.example.web.JokeSelect</servlet-class>
 
 		<init-param>
-			<param-name>just_test</param-name>
-			<param-value>aaabbbccc</param-value>
+			<param-name>markup-designer</param-name>
+			<param-value>Mark</param-value>
 		</init-param>
 	</servlet>
 
@@ -18,15 +18,15 @@
 		<url-pattern>/joke.do</url-pattern>
   	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>j</servlet-name>
-		<servlet-class>com.example.web.servlet_1</servlet-class>
-	</servlet>
+	<!--<servlet>-->
+		<!--<servlet-name>j</servlet-name>-->
+		<!--<servlet-class>com.example.web.servlet_1</servlet-class>-->
+	<!--</servlet>-->
 
-	<servlet-mapping>
-		<servlet-name>j</servlet-name>
-		<url-pattern>url_1</url-pattern>
-	</servlet-mapping>
+	<!--<servlet-mapping>-->
+		<!--<servlet-name>j</servlet-name>-->
+		<!--<url-pattern>url_1</url-pattern>-->
+	<!--</servlet-mapping>-->
 	<!-- "Сервлет <-> JSP" END -->
 
 	<context-param>
