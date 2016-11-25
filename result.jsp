@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <div>
-        <a href="https://github.com/kvark85/JAVA_Joke_exprt-MVC-">github.com/kvark85/JAVA_Joke_exprt-MVC-</a>
+        <a href="https://github.com/kvark85/JAVA_Joke_exprt-MVC">github.com/kvark85/JAVA_Joke_exprt-MVC</a>
     </div>
 
     <div class="page-header">

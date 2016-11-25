@@ -11,4 +11,9 @@ public class servlet_1 extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher("jsp_1.jsp");
         view.forward(request, response);
     }
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.setCharacterEncoding("UTF-8");
+        RequestDispatcher view = request.getRequestDispatcher("jsp_1.jsp");
+        view.forward(request, response);
+    }
 }

@@ -18,15 +18,15 @@
 		<url-pattern>/joke.do</url-pattern>
   	</servlet-mapping>
 
-	<!--<servlet>-->
-		<!--<servlet-name>j</servlet-name>-->
-		<!--<servlet-class>com.example.web.servlet_1</servlet-class>-->
-	<!--</servlet>-->
+	<servlet>
+		<servlet-name>url_1</servlet-name>
+		<servlet-class>com.example.web.servlet_1</servlet-class>
+	</servlet>
 
-	<!--<servlet-mapping>-->
-		<!--<servlet-name>j</servlet-name>-->
-		<!--<url-pattern>/url_1</url-pattern>-->
-	<!--</servlet-mapping>-->
+	<servlet-mapping>
+		<servlet-name>url_1</servlet-name>
+		<url-pattern>/url_1</url-pattern>
+	</servlet-mapping>
 	<!-- "Сервлет <-> JSP" END -->
 
 	<context-param>
