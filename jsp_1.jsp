@@ -11,11 +11,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<dib>
-    111
-</dib>
-<duv>
-    222
-</duv>
+
+<div class="container">
+    <div class="page-header"><div>Типа header</div></div>
+
+    <%!
+        public void jspInit() {
+            //todo не могу никак в этом месте вытащить testEmail из КОНФИГУРАЦИИ СЕРВЛЕТА
+            ServletConfig servletConfig = getServletConfig();
+            String testEmail = servletConfig.getInitParameter("testEmail");
+            ServletContext ctx = getServletContext();
+
+
+            String ss = getServletConfig().getInitParameter("testEmail");
+
+
+            ctx.setAttribute("testEmail_1", "testEmail");
+            ctx.setAttribute("testEmail_2", "testEmail");
+            ctx.setAttribute("testEmail_3", "testEmail");
+        }
+    %>
+
+    <div class="demoBlock">
+        <%--<%--%>
+            <%--ServletContext c = getServletContext();--%>
+            <%--String m = (String)c.getAttribute("testEmail_1");--%>
+            <%--out.println(m);--%>
+        <%--%>--%>
+    </div>
+
+    <%--<div class="demoBlock">--%>
+        <%--${mail}--%>
+    <%--</div>--%>
+</div>
 </body>
 </html>

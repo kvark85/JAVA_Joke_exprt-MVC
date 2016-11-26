@@ -1,4 +1,5 @@
 <%@ page import="java.util.*" %>
+<%@ page import="com.example.aboutDeveloper.DeveloperInformation" %>
 <%@ page contentType="text/html;charset=utf-8" %>
 
 
@@ -22,10 +23,7 @@
     </div>
 
     <div class="margin-bottom">
-        <%
-            String joke = (String)request.getAttribute("joke");
-            out.print(":) " + joke);
-        %>
+        :) <%= (String)request.getAttribute("joke") %>
     </div>
 
     <div class="margin-bottom">
@@ -33,21 +31,23 @@
     </div>
 
     <div class="jumbotron">
-        <p>
-            Данная страница построена с помощью jsp
-        </p>
-        <p>
-            Дизайнер этой страницы:
-            <b><% out.print((String)request.getAttribute("markup_designer")); %></b>
-            <br />
-            (путь: servlet init parameters (in DD) -> Servlet -> JSP)
-        </p>
-        <p>
-            Значение <b>"main_domain"</b> из <b>"context init parameters"</b>:
-            <b><% out.print((String)request.getAttribute("main_domain")); %></b>
-            <br />
-            (путь: context init parameters (in DD) -> Servlet -> JSP)
-        </p>
+        <div class="demoBlock">
+            Дизайнер этой страницы: <b><%= (String)request.getAttribute("markup_designer") %></b>
+            (изначально значение в КОНФИГУРАЦИИ СЕРВЛЕТА (в DD), в сервлете значение помещается в request).
+        </div>
+
+        <div class="demoBlock">
+            Наш слоган: <b><%= (String)request.getAttribute("slogan") %></b>
+            (изначально значение в КОНФИГУРАЦИИ КОНТЕКСТА СЕРВЛЕТОВ (в DD), в сервлете значение помещается в request).
+        </div>
+
+        <div class="demoBlock">
+            <%DeveloperInformation developer = (DeveloperInformation)getServletContext().getAttribute("developer");%>
+
+            Разработчик: <b><%= developer.getName() %> (email: <%= developer.getEmail() %>)</b>
+            (изначально значения в КОНФИГУРАЦИИ КОНТЕКСТА СЕРВЛЕТОВ (в DD), в слушателе контекста сервлетов
+            создается обьект "developer" и помещается в КОНТЕКСТ СЕРВЛЕТОВ).
+        </div>
     </div>
 </div>
 </body>

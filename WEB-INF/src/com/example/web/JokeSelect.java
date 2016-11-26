@@ -8,21 +8,22 @@ import java.io.*;
 
 public class JokeSelect extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String c = request.getParameter("subject");
-
-        String result = JokeExpert.getJoke(c);
-
         request.setCharacterEncoding("UTF-8");
 
-        String markupDesigner = getServletConfig().getInitParameter("markup-designer");
-        String main_domain = getServletContext().getInitParameter("main_domain");
-        String admin_email = getServletContext().getInitParameter("admin_email");
-
+        /* Берем id темы шутки из request, достаем шутку с помощю JokeExpert и помещаем его в request*/
+        String c = request.getParameter("subject");
+        String result = JokeExpert.getJoke(c);
         request.setAttribute("joke", result);
-        request.setAttribute("markup_designer", markupDesigner);
-        request.setAttribute("main_domain", main_domain);
-        request.setAttribute("admin_email", admin_email);
 
+        /* Берем "дизайнера" из КОНФИГУРАЦИИ СЕРВЛЕТА и помещаем его в request */
+        String markupDesigner = getServletConfig().getInitParameter("markup-designer");
+        request.setAttribute("markup_designer", markupDesigner);
+
+        /* Берем слоган из КОНТЕКСТА СЕРВЛЕТОВ и помещаем его в request */
+        String slogan = getServletContext().getInitParameter("slogan");
+        request.setAttribute("slogan", slogan);
+
+        /*Передаем данные дальше, в jsp*/
         RequestDispatcher view = request.getRequestDispatcher("result.jsp");
         view.forward(request, response);
     }
