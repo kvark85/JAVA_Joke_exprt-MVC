@@ -3,39 +3,44 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     version="2.4">
 	<!-- "Сервлет <-> JSP" START -->
-		<servlet>
-			<servlet-name>Ch3 Beer</servlet-name>
-			<servlet-class>com.example.web.JokeSelect</servlet-class>
+		<!--Связка для JokeSelect START-->
+			<servlet>
+				<servlet-name>Ch3 Beer</servlet-name>
+				<servlet-class>com.example.web.JokeSelect</servlet-class>
 
-			<init-param>
-				<param-name>markup-designer</param-name>
-				<param-value>Mark</param-value>
-			</init-param>
-		</servlet>
+				<init-param>
+					<param-name>markup-designer</param-name>
+					<param-value>Mark</param-value>
+				</init-param>
+			</servlet>
 
-		<servlet-mapping>
-			<servlet-name>Ch3 Beer</servlet-name>
-			<url-pattern>/joke.do</url-pattern>
-		</servlet-mapping>
+			<servlet-mapping>
+				<servlet-name>Ch3 Beer</servlet-name>
+				<url-pattern>/joke.do</url-pattern>
+			</servlet-mapping>
+		<!--Связка для JokeSelect END-->
 
-		<servlet>
-			<servlet-name>url_1</servlet-name>
-			<servlet-class>com.example.web.servlet_1</servlet-class>
+		<!--Связка для servlet_1 START-->
+			<servlet>
+				<servlet-name>u</servlet-name>
+				<servlet-class>com.example.web.servlet_1</servlet-class>
 
-			<!--<init-param>-->
-				<!--<param-name>testEmail</param-name>-->
-				<!--<param-value>ikickedbutt@wickedlysmart.com</param-value>-->
-			<!--</init-param>-->
-			<init-param>
-				<param-name>markup-designer</param-name>
-				<param-value>Mark</param-value>
-			</init-param>
-		</servlet>
+				<init-param>
+					<param-name>initParam1</param-name>
+					<param-value>ikickedbutt@wickedlysmart.com</param-value>
+				</init-param>
 
-		<servlet-mapping>
-			<servlet-name>url_1</servlet-name>
-			<url-pattern>/url_1</url-pattern>
-		</servlet-mapping>
+				<init-param>
+					<param-name>initParam2</param-name>
+					<param-value>Mark</param-value>
+				</init-param>
+			</servlet>
+
+			<servlet-mapping>
+				<servlet-name>u</servlet-name>
+				<url-pattern>/u</url-pattern>
+			</servlet-mapping>
+		<!--Связка для servlet_1 END-->
 	<!-- "Сервлет <-> JSP" END -->
 
 	<!-- Context param START -->
