@@ -22,27 +22,24 @@
             String testEmail = servletConfig.getInitParameter("testEmail");
             ServletContext ctx = getServletContext();
 
-
             String ss = getServletConfig().getInitParameter("testEmail");
 
-
-            ctx.setAttribute("testEmail_1", "testEmail");
-            ctx.setAttribute("testEmail_2", "testEmail");
-            ctx.setAttribute("testEmail_3", "testEmail");
+            ctx.setAttribute("testEmail", testEmail);
         }
     %>
 
     <div class="demoBlock">
-        <%--<%--%>
-            <%--ServletContext c = getServletContext();--%>
-            <%--String m = (String)c.getAttribute("testEmail_1");--%>
-            <%--out.println(m);--%>
-        <%--%>--%>
+        Блок 1
+        <%
+            ServletContext c = getServletContext();
+            String m = (String)c.getAttribute("testEmail");
+            out.println(m);
+        %>
     </div>
 
-    <%--<div class="demoBlock">--%>
-        <%--${mail}--%>
-    <%--</div>--%>
+    <div class="demoBlock">
+        Блок 2 ${testEmail}
+    </div>
 </div>
 </body>
 </html>

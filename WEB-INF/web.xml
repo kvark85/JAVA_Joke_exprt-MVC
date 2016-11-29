@@ -23,16 +23,12 @@
 		<!--Связка для servlet_1 START-->
 			<servlet>
 				<servlet-name>u</servlet-name>
-				<servlet-class>com.example.web.servlet_1</servlet-class>
+				<jsp-file>/j1.jsp</jsp-file>
+				<!--<servlet-class>com.example.web.servlet_1</servlet-class>-->
 
 				<init-param>
-					<param-name>initParam1</param-name>
+					<param-name>testEmail</param-name>
 					<param-value>ikickedbutt@wickedlysmart.com</param-value>
-				</init-param>
-
-				<init-param>
-					<param-name>initParam2</param-name>
-					<param-value>Mark</param-value>
 				</init-param>
 			</servlet>
 
