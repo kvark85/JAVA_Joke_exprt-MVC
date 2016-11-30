@@ -22,8 +22,8 @@
 
 		<!--Связка для servlet_1 START-->
 			<servlet>
-				<servlet-name>u</servlet-name>
-				<jsp-file>/j1.jsp</jsp-file>
+				<servlet-name>jsp_1</servlet-name>
+				<jsp-file>/jsp_1.jsp</jsp-file>
 				<!--<servlet-class>com.example.web.servlet_1</servlet-class>-->
 
 				<init-param>
@@ -33,8 +33,8 @@
 			</servlet>
 
 			<servlet-mapping>
-				<servlet-name>u</servlet-name>
-				<url-pattern>/u</url-pattern>
+				<servlet-name>jsp_1</servlet-name>
+				<url-pattern>/jsp_1</url-pattern>
 			</servlet-mapping>
 		<!--Связка для servlet_1 END-->
 	<!-- "Сервлет <-> JSP" END -->

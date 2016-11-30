@@ -28,6 +28,17 @@
         }
     %>
 
+    <% Float one = new Float(42.5); %>
+
+    <%
+        pageContext.setAttribute("foo", one);
+        pageContext.setAttribute("foo2", one, PageContext.SESSION_SCOPE);
+
+        Float a = (Float)pageContext.getAttribute("foo2", PageContext.SESSION_SCOPE);
+
+        pageContext.setAttribute("foo3", one, PageContext.SESSION_SCOPE);
+    %>
+
     <div class="demoBlock">
         Блок 1
         <%
