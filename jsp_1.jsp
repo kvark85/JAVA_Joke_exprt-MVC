@@ -1,4 +1,5 @@
-<%@ page import="java.util.*" %>
+<%@ page import="javax.servlet.jsp.PageContext" %>
+
 <%@ page contentType="text/html;charset=utf-8" %>
 
 <!DOCTYPE HTML>
@@ -28,15 +29,9 @@
         }
     %>
 
-    <% Float one = new Float(42.5); %>
-
     <%
-        pageContext.setAttribute("foo", one);
-        pageContext.setAttribute("foo2", one, PageContext.SESSION_SCOPE);
-
-        Float a = (Float)pageContext.getAttribute("foo2", PageContext.SESSION_SCOPE);
-
-        pageContext.setAttribute("foo3", one, PageContext.SESSION_SCOPE);
+        pageContext.setAttribute("foo", new Float(42.5));
+        pageContext.setAttribute("foo2", new String("slon"), PageContext.SESSION_SCOPE);
     %>
 
     <div class="demoBlock">
@@ -50,6 +45,14 @@
 
     <div class="demoBlock">
         Блок 2 ${testEmail}
+    </div>
+
+    <div class="demoBlock">
+        Блок 3 foo = ${foo}
+    </div>
+
+    <div class="demoBlock">
+        Блок 4 foo2 = ${foo2}
     </div>
 </div>
 </body>
