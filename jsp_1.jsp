@@ -21,10 +21,8 @@
             //todo не могу никак в этом месте вытащить testEmail из КОНФИГУРАЦИИ СЕРВЛЕТА
             ServletConfig servletConfig = getServletConfig();
             String testEmail = servletConfig.getInitParameter("testEmail");
+
             ServletContext ctx = getServletContext();
-
-            String ss = getServletConfig().getInitParameter("testEmail");
-
             ctx.setAttribute("testEmail", testEmail);
         }
     %>
@@ -35,24 +33,51 @@
     %>
 
     <div class="demoBlock">
-        Блок 1
+        (Блок 1) testEmail =
         <%
             ServletContext c = getServletContext();
             String m = (String)c.getAttribute("testEmail");
             out.println(m);
         %>
+        <br>
+        ServletContext c = getServletContext();<br>
+        String m = (String)c.getAttribute("testEmail");<br>
+        out.println(m);
     </div>
 
     <div class="demoBlock">
-        Блок 2 ${testEmail}
+        (Блок 2) testEmail = ${testEmail}<br>
+        &#36;{testEmail}
     </div>
 
     <div class="demoBlock">
-        Блок 3 foo = ${foo}
+        (Блок 3) foo = ${foo} <br>
+        &#36;{foo}
     </div>
 
     <div class="demoBlock">
-        Блок 4 foo2 = ${foo2}
+        (Блок 4) foo2 = ${foo2} <br>
+        &#36;{foo2}
+    </div>
+
+    <div class="demoBlock">
+        (Блок 5) foo = <%= pageContext.getAttribute("foo") %> <br>
+        &lsaquo;%= pageContext.getAttribute("foo") %&rsaquo;
+    </div>
+
+    <div class="demoBlock">
+        (Блок 6) foo = <%= pageContext.findAttribute("foo") %> <br>
+        &lsaquo;%= pageContext.findAttribute("foo") %&rsaquo;
+    </div>
+
+    <div class="demoBlock">
+        (Блок 7) foo2 = <%= pageContext.findAttribute("foo2") %> <br>
+        &lsaquo;%= pageContext.findAttribute("foo2") %&rsaquo;
+    </div>
+
+    <div class="demoBlock">
+        (Блок 8) foo2 = <%= pageContext.findAttribute("foo2") %> <br>
+        &lsaquo;%= pageContext.findAttribute("foo2") %&rsaquo;
     </div>
 </div>
 </body>
