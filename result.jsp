@@ -27,7 +27,7 @@
     </div>
 
     <div class="margin-bottom">
-        <a class="btn btn-primary" href="/JAVA_Joke_exprt-MVC" role="button">Назад</a>
+        <button id="backBtn" class="btn btn-primary">Назад</button>
     </div>
 
     <div class="jumbotron">
@@ -50,5 +50,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById("backBtn").addEventListener("click", function(){
+        window.history.back();
+    });
+</script>
 </body>
 </html>

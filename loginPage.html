@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="ru-ru">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<div>Вы переходите в секретную часть сайта</div>
+<div>Для продолжения, пожалуйста, введите пароль</div>
+<div>(логин для секретной jsp: Annie, пароль: admin)</div>
+
+<form method="POST" action="j_security_check">
+    <div>
+        <input type="text" name="j_username" placeholder="Логин">
+    </div>
+
+    <div>
+        <input type="password" name="j_password" placeholder="Пароль">
+    </div>
+
+    <div>
+        <input type="submit" value="Вход">
+    </div>
+
+</form>
+</body>
+</html>
