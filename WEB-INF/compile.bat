@@ -26,5 +26,11 @@ javac -classpath C:\apache-tomcat-7.0.72\lib\servlet-api.jar;classes -d classes 
 echo 7) Recompile servlet_1
 javac -classpath C:\apache-tomcat-7.0.72\lib\servlet-api.jar;classes -d classes src\com\example\web\servlet_1.java
 
+echo 7) Recompile filter1
+javac -classpath C:\apache-tomcat-7.0.72\lib\servlet-api.jar -d classes src\com\example\filters\filter1.java
+
+echo 8) Recompile CompressionFilter
+javac -classpath C:\apache-tomcat-7.0.72\lib\servlet-api.jar -d classes src\com\example\filters\CompressionFilter.java
+
 echo Complete .................... Ok
 pause
