@@ -13,7 +13,7 @@ public class servlet_1 extends HttpServlet {
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setCharacterEncoding("UTF-8");
-        RequestDispatcher view = request.getRequestDispatcher("j1.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("jsp_1.jsp");
         view.forward(request, response);
     }
 }

@@ -1,5 +1,4 @@
 <%@ page import="javax.servlet.jsp.PageContext" %>
-
 <%@ page contentType="text/html;charset=utf-8" %>
 
 <!DOCTYPE HTML>
@@ -18,7 +17,6 @@
 
     <%!
         public void jspInit() {
-            //todo не могу никак в этом месте вытащить testEmail из КОНФИГУРАЦИИ СЕРВЛЕТА
             ServletConfig servletConfig = getServletConfig();
             String testEmail = servletConfig.getInitParameter("testEmail");
 

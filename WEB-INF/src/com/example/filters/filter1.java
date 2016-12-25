@@ -1,5 +1,7 @@
 package com.example.filters;
 
+import com.example.logger.FileLogger;
+
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -23,21 +25,15 @@ public class filter1 implements Filter {
 
         HttpServletRequest httpReq = (HttpServletRequest) req;
         String name = httpReq.getRemoteUser();
-        if (name != null) {
-            //fc.getServletContext().log("User " + name + " is updating"); // it is don't work (don't know why)
-            FileWriter writer = null;
-            try {
-                writer = new FileWriter(LogFileName, true);
-                writer.write("User " + name + " visited a secret page\r\n");
-            }
-            catch(IOException e ){
-                System.out.print(e.getMessage());
-            }
-            finally{
-                writer.close();
-            }
-        }
+
+        if (name == null) { name = "Someone"; }
+
+        FileLogger.log(LogFileName, "User " + name + " visited a secret page\r\n");
+
         chain.doFilter(req, resp);
+
+        FileLogger.log("C:/New_file_from_java.txt", "User " + name + " visited a secret page\r\n");
+        FileLogger.log("C:/New_file_from_java.txt", "1111111111111111e\r\n");
     }
 
     public void destroy() {

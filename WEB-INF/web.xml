@@ -20,22 +20,45 @@
 			</servlet-mapping>
 		<!--Связка для JokeSelect END-->
 
-		<!--Связка для servlet_1 START-->
-			<servlet>
-				<servlet-name>jsp_1</servlet-name>
-				<jsp-file>/jsp_1.jsp</jsp-file>
-				<!--<servlet-class>com.example.web.servlet_1</servlet-class>-->
+        <!--Связка для servlet_1 START-->
+            <servlet>
+                <servlet-name>jsp_1</servlet-name>
+                <jsp-file>/jsp_1.jsp</jsp-file>
 
-				<init-param>
-					<param-name>testEmail</param-name>
-					<param-value>ikickedbutt@wickedlysmart.com</param-value>
-				</init-param>
+                <init-param>
+                    <param-name>testEmail</param-name>
+                    <param-value>ikickedbutt@wickedlysmart.com</param-value>
+                </init-param>
+            </servlet>
+
+            <servlet-mapping>
+                <servlet-name>jsp_1</servlet-name>
+                <url-pattern>/jsp_1</url-pattern>
+            </servlet-mapping>
+        <!--Связка для servlet_1 END-->
+
+		<!--Связка для servlet_2 START-->
+			<servlet>
+				<servlet-name>jsp_2</servlet-name>
+				<jsp-file>/jsp_2.jsp</jsp-file>
 			</servlet>
 
 			<servlet-mapping>
-				<servlet-name>jsp_1</servlet-name>
-				<url-pattern>/jsp_1</url-pattern>
+				<servlet-name>jsp_2</servlet-name>
+				<url-pattern>/jsp_2</url-pattern>
 			</servlet-mapping>
+		<!--Связка для servlet_2 END-->
+
+		<!--Связка для servlet_3 START-->
+		<servlet>
+			<servlet-name>jsp_3</servlet-name>
+			<jsp-file>/jsp_3.jsp</jsp-file>
+		</servlet>
+
+		<servlet-mapping>
+			<servlet-name>jsp_3</servlet-name>
+			<url-pattern>/jsp_3</url-pattern>
+		</servlet-mapping>
 		<!--Связка для servlet_1 END-->
 	<!-- "Сервлет <-> JSP" END -->
 
@@ -94,19 +117,37 @@
 	<!-- Описываем роли для аутентификации END -->
 
 	<!-- Настройка фильтра START -->
-	<filter>
-		<filter-name>Filter_1</filter-name>
-		<filter-class>com.example.filters.filter1</filter-class>
-		<init-param>
-			<param-name>LogFileName</param-name>
-			<param-value>UserLog.txt</param-value>
-		</init-param>
-	</filter>
+		<!-- Настройка фильтра для jsp_1 START -->
+			<filter>
+				<filter-name>Filter_1</filter-name>
+				<filter-class>com.example.filters.filter1</filter-class>
+				<init-param>
+					<param-name>LogFileName</param-name>
+					<param-value>UserLog.txt</param-value>
+				</init-param>
+			</filter>
 
-	<filter-mapping>
-		<filter-name>Filter_1</filter-name>
-		<url-pattern>/jsp_1</url-pattern>
-	</filter-mapping>
+			<filter-mapping>
+				<filter-name>Filter_1</filter-name>
+				<url-pattern>/jsp_1</url-pattern>
+			</filter-mapping>
+	    <!-- Настройка фильтра для jsp_1 END -->
+
+		<!-- Настройка фильтра для jsp_3 START -->
+			<filter>
+				<filter-name>Filter_3</filter-name>
+				<filter-class>com.example.filters.MyCompressionFilter</filter-class>
+				<init-param>
+					<param-name>LogFileName</param-name>
+					<param-value>UserLog.txt</param-value>
+				</init-param>
+			</filter>
+
+			<filter-mapping>
+				<filter-name>Filter_3</filter-name>
+				<url-pattern>/jsp_3</url-pattern>
+			</filter-mapping>
+		<!-- Настройка фильтра для jsp_3 END -->
 	<!-- Настройка фильтра END -->
 
 </web-app>
