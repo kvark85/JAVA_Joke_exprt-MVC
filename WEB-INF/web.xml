@@ -136,7 +136,7 @@
 		<!-- Настройка фильтра для jsp_3 START -->
 			<filter>
 				<filter-name>Filter_3</filter-name>
-				<filter-class>com.example.filters.MyCompressionFilter</filter-class>
+				<filter-class>com.example.filters.CompressionFilter</filter-class>
 				<init-param>
 					<param-name>LogFileName</param-name>
 					<param-value>UserLog.txt</param-value>
