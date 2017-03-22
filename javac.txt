@@ -6,17 +6,8 @@ javac -d classes src\com\example\model\JokeExpert.java
 2) Recompile test for model:
 javac -classpath classes -d classes src\com\example\test\testModel.java
 
-4) Recompile developer information class:
-javac -d classes src\com\example\aboutDeveloper\DeveloperInformation.java
-
-5) Recompile servlet context listener:
-javac -classpath C:\apache-tomcat-7.0.72\lib\servlet-api.jar;classes -d classes src\com\example\FirstServletContextListener.java
-
-6) Recompile JokeSelect:
+3) Recompile JokeSelect:
 javac -classpath C:\apache-tomcat-7.0.72\lib\servlet-api.jar;classes -d classes src\com\example\web\JokeSelect.java
-
-7) Recompile servlet_1:
-javac -classpath C:\apache-tomcat-7.0.72\lib\servlet-api.jar;classes -d classes src\com\example\web\servlet_1.java
 
 ----------
 

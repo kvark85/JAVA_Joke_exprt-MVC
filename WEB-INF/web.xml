@@ -2,111 +2,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     version="2.4">
-	<!-- "Сервлет <-> JSP" START -->
-		<!--Связка для JokeSelect START-->
-			<servlet>
-				<servlet-name>Ch3 Beer</servlet-name>
-				<servlet-class>com.example.web.JokeSelect</servlet-class>
 
-				<init-param>
-					<param-name>markup-designer</param-name>
-					<param-value>Mark</param-value>
-				</init-param>
-			</servlet>
+    <servlet>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <servlet-class>com.example.web.JokeSelect</servlet-class>
+    </servlet>
 
-			<servlet-mapping>
-				<servlet-name>Ch3 Beer</servlet-name>
-				<url-pattern>/joke.do</url-pattern>
-			</servlet-mapping>
-		<!--Связка для JokeSelect END-->
-
-		<!--Связка для servlet_1 START-->
-			<servlet>
-				<servlet-name>jsp_1</servlet-name>
-				<jsp-file>/jsp_1.jsp</jsp-file>
-				<!--<servlet-class>com.example.web.servlet_1</servlet-class>-->
-
-				<init-param>
-					<param-name>testEmail</param-name>
-					<param-value>ikickedbutt@wickedlysmart.com</param-value>
-				</init-param>
-			</servlet>
-
-			<servlet-mapping>
-				<servlet-name>jsp_1</servlet-name>
-				<url-pattern>/jsp_1</url-pattern>
-			</servlet-mapping>
-		<!--Связка для servlet_1 END-->
-	<!-- "Сервлет <-> JSP" END -->
-
-	<!-- Context param START -->
-		<context-param>
-			<param-name>slogan</param-name>
-			<param-value>Тяжело в учении, легко в бою</param-value>
-		</context-param>
-
-		<!-- Developer Information  START -->
-			<context-param>
-				<param-name>developer_name</param-name>
-				<param-value>Andrey</param-value>
-			</context-param>
-
-			<context-param>
-				<param-name>developer_email</param-name>
-				<param-value>kvark198@gmail.com</param-value>
-			</context-param>
-		<!-- Developer Information  END -->
-	<!-- Context param END -->
-
-	<!-- Описываем слушателей Information  START -->
-		<listener>
-			<listener-class>com.example.FirstServletContextListener</listener-class>
-		</listener>
-	<!-- Описываем слушателей Information  END -->
-
-	<!-- ************************************************* -->
-
-	<!-- Описываем роли для аутентификации START -->
-	<security-role><role-name>Admin</role-name></security-role>
-	<security-role><role-name>Member</role-name></security-role>
-	<security-role><role-name>Guest</role-name></security-role>
-
-	<login-config>
-		<auth-method>FORM</auth-method>
-		<form-login-config>
-			<form-login-page>/loginPage.html</form-login-page>
-			<form-error-page>/loginError.html</form-error-page>
-		</form-login-config>
-	</login-config>
-
-	<security-constraint>
-		<web-resource-collection>
-			<web-resource-name>UpdateRecipes</web-resource-name>
-			<url-pattern>/jsp_1</url-pattern>
-			<!--<http-method>GET</http-method>-->
-			<!--<http-method>POST</http-method>-->
-		</web-resource-collection>
-		<auth-constraint>
-			<role-name>Admin</role-name>
-			<role-name>Member</role-name>
-		</auth-constraint>
-	</security-constraint>
-	<!-- Описываем роли для аутентификации END -->
-
-	<!-- Настройка фильтра START -->
-	<filter>
-		<filter-name>Filter_1</filter-name>
-		<filter-class>com.example.filters.filter1</filter-class>
-		<init-param>
-			<param-name>LogFileName</param-name>
-			<param-value>UserLog.txt</param-value>
-		</init-param>
-	</filter>
-
-	<filter-mapping>
-		<filter-name>Filter_1</filter-name>
-		<url-pattern>/jsp_1</url-pattern>
-	</filter-mapping>
-	<!-- Настройка фильтра END -->
-
+    <servlet-mapping>
+        <servlet-name>Ch3 Beer</servlet-name>
+        <url-pattern>/joke.do</url-pattern>
+    </servlet-mapping>
 </web-app>
